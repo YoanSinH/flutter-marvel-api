@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:marvel_api/view/pages/home.dart';
+import 'package:marvel_api/view/pages/list_characters.dart';
 
 Future<void> loadFont() async {
   await rootBundle.load("assets/fonts/MarvelRegular-Dj83.ttf");
