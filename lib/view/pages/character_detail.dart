@@ -22,7 +22,7 @@ class CharacterDetails extends StatelessWidget {
             Text(
               '$value',
               style: TextStyle(
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontWeight: FontWeight.bold,
                   fontSize: 16),
             ),
@@ -31,14 +31,14 @@ class CharacterDetails extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
             )
           ],
         ),
       );
   Widget buildStaticsIcon(IconData icon) => CircleAvatar(
       radius: 25,
-      backgroundColor: Color.fromARGB(255, 237, 29, 36),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       child: Material(
         shape: CircleBorder(),
         clipBehavior: Clip.hardEdge,
@@ -48,7 +48,7 @@ class CharacterDetails extends StatelessWidget {
           child: Center(
             child: Icon(
               icon,
-              color: Colors.white,
+              color: Color.fromARGB(255, 255, 255, 255),
               size: 32,
             ),
           ),
@@ -62,11 +62,12 @@ class CharacterDetails extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Container(
           padding: const EdgeInsets.symmetric(horizontal: 80),
-          child: SizedBox(
-            height: 50,
-            child: Image.asset(
-              'assets/images/marvel_logo.png',
-              fit: BoxFit.cover,
+          child: Text(
+            'Marvel API',
+            style: TextStyle(
+              fontFamily: 'Marvel',
+              fontSize: 20,
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
           ),
         ),
@@ -81,80 +82,41 @@ class CharacterDetails extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Container(
-              height: 21,
               decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(width: 0, color: Colors.transparent),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.black,
+                color: Color.fromARGB(255, 255, 255, 255),
                 border: Border.all(width: 0, color: Colors.transparent),
               ),
               child: Text(
                 character.name,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Container(
-              height: 21,
               decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(width: 0, color: Colors.transparent),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.black,
+                color: Color.fromARGB(255, 255, 255, 255),
                 border: Border.all(width: 0, color: Colors.transparent),
               ),
               child: Text(
                 character.description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontSize: 16,
                 ),
               ),
             ),
             Container(
-              height: 13,
               decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(width: 0, color: Colors.transparent),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border.all(width: 0, color: Colors.transparent),
+                color: Color.fromARGB(255, 255, 255, 255),
+                border: Border.all(width: 0, color: Color.fromARGB(0, 255, 255, 255)),
               ),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      buildStaticsIcon(Icons.menu_book),
-                      const SizedBox(
-                        width: 37,
-                      ),
-                      buildStaticsIcon(Icons.connected_tv_outlined),
-                      const SizedBox(
-                        width: 37,
-                      ),
-                      buildStaticsIcon(Icons.history_edu),
-                      const SizedBox(
-                        width: 37,
-                      ),
-                      buildStaticsIcon(Icons.event_note_sharp)
-                    ],
-                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

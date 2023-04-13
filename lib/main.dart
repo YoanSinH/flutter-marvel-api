@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:marvel_api/view/main_app.dart';
+import 'package:marvel_api/view/pages/detail_character.dart';
+
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Marvel API",
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: MainApp1(),
+      routes: {'detail_character': (context) => DetailCharacter()},
     );
   }
 }

@@ -88,16 +88,7 @@ class _ListCharactersState extends State<ListCharacters> {
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 150),
-          child: SizedBox(
-            height: 50,
-            child: Image.asset(
-              'assets/images/marvel_logo.png',
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
+        
       ),
       body: Center(
         child: characters.isEmpty
